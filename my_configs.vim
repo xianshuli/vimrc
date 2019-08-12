@@ -22,3 +22,6 @@ vmap <C-c> :w !pbcopy<CR><CR>
 set number
 " use Space key to highlight current word in current file
 nnoremap <space> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
+" remove included files in vim auto complete search source
+setlocal complete-=i
+setglobal complete-=i
