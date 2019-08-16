@@ -25,3 +25,5 @@ nnoremap <space> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 " remove included files in vim auto complete search source
 setlocal complete-=i
 setglobal complete-=i
+" disable persistant-undo
+set noundofile
