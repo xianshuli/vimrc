@@ -8,6 +8,8 @@
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
+" To disable a plugin, add it's bundle name to the following list
+let g:pathogen_disabled = ['ale', 'nerdtree', 'goyo', 'zenroom2']
 let s:vim_runtime = expand('<sfile>:p:h')."/.."
 call pathogen#infect(s:vim_runtime.'/sources_forked/{}')
 call pathogen#infect(s:vim_runtime.'/sources_non_forked/{}')
