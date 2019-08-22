@@ -179,3 +179,12 @@ let g:ale_lint_on_enter = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => YouCompleteMe
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" always enable YCM no matter how large the file is
+let g:ycm_disable_for_files_larger_than_kb = 0
+" show the completion menu even when typing inside comments
+let g:ycm_complete_in_comments = 1
