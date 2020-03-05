@@ -194,3 +194,9 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 " delete this setting if the plugin becomes too slow
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ctrlp
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Number of files to scan initially
+let g:ctrlp_max_files = 0
