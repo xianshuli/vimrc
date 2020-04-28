@@ -27,3 +27,7 @@ setlocal complete-=i
 setglobal complete-=i
 " disable persistant-undo
 set noundofile
+
+map <F5> :!find /home/xianshuli/$YROOT_NAME/ /home/y/include/ /home/y/include64/ -name '*.c' -o -name '*.h' -o -name '*.idl' -o -name '*.cc' -o -name '*.hh' -o -name '*.pl' > /home/xianshuli/$YROOT_NAME/cscope.files;
+            \cscope -i /home/xianshuli/$YROOT_NAME/cscope.files -bq<CR>
+            \:cs reset<CR><CR>
