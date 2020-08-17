@@ -54,6 +54,8 @@ map <C-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+" Number of files to scan initially, 0 means unlimited
+let g:ctrlp_max_files = 0
 
 
 """"""""""""""""""""""""""""""
@@ -185,9 +187,3 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 " delete this setting if the plugin becomes too slow
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => ctrlp
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Number of files to scan initially
-let g:ctrlp_max_files = 0
