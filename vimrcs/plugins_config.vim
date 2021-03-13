@@ -63,6 +63,12 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 " Number of files to scan initially, 0 means unlimited
 let g:ctrlp_max_files = 0
 
+" Use rg for ctrl-p plugin
+if executable('rg')
+  set grepprg=rg\ --hidden\ --color=never
+  let g:ctrlp_use_caching = 0
+  let g:ctrlp_user_command = 'rg --files --hidden --color=never * %s'
+endif
 
 """"""""""""""""""""""""""""""
 " => ZenCoding
