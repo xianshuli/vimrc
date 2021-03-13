@@ -8,6 +8,8 @@
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
+" To disable a plugin, add it's bundle name to the following list
+let g:pathogen_disabled = ['ack', 'bufexplorer',  'goyo', 'zenroom2', 'nerdtree', 'open_file_under_cursor', 'vim-snipmate', 'ale', 'vim-expand-region', 'vim-fugitive', 'vim-indent-object', 'vim-multiple-cursors', 'vim-yankstack', 'vim-markdown']
 let s:vim_runtime = expand('<sfile>:p:h')."/.."
 call pathogen#infect(s:vim_runtime.'/sources_forked/{}')
 call pathogen#infect(s:vim_runtime.'/sources_non_forked/{}')
@@ -55,7 +57,15 @@ map <leader>b :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+" Number of files to scan initially, 0 means unlimited
+let g:ctrlp_max_files = 0
 
+" Use rg for ctrl-p plugin
+if executable('rg')
+  set grepprg=rg\ --hidden\ --color=never
+  let g:ctrlp_use_caching = 0
+  let g:ctrlp_user_command = 'rg --files --hidden --color=never * %s'
+endif
 
 """"""""""""""""""""""""""""""
 " => ZenCoding
@@ -186,3 +196,18 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " Copy the link to the line of a Git repository to the clipboard
 nnoremap <leader>v :.GBrowse!<CR>
 xnoremap <leader>v :GBrowse!<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => YouCompleteMe
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" always enable YCM no matter how large the file is
+let g:ycm_disable_for_files_larger_than_kb = 0
+" show the completion menu even when typing inside comments
+let g:ycm_complete_in_comments = 1
+" don't ask before loading ycm_confirm_extra_conf
+let g:ycm_confirm_extra_conf = 0
+" auto close preview window after completion
+let g:ycm_autoclose_preview_window_after_completion = 1
+" delete this setting if the plugin becomes too slow
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
