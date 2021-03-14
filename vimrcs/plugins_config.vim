@@ -60,6 +60,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 " Number of files to scan initially, 0 means unlimited
 let g:ctrlp_max_files = 0
 
+" need to install rg with command `sudo apt install ripgrep` first
 " Use rg for ctrl-p plugin
 if executable('rg')
   set grepprg=rg\ --hidden\ --color=never
