@@ -50,7 +50,7 @@ let g:ctrlp_working_path_mode = 0
 
 " Quickly find and open a file in the current working directory
 let g:ctrlp_map = '<C-f>'
-map <leader>j :CtrlP<cr>
+" map <leader>j :CtrlP<cr>
 
 " Quickly find and open a buffer
 map <leader>b :CtrlPBuffer<cr>
@@ -211,3 +211,4 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 " delete this setting if the plugin becomes too slow
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
