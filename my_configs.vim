@@ -31,3 +31,13 @@ set noundofile
 map <F5> :!find ./ -name '*.c' -o -name '*.h' -o -name '*.gcl' -o -name '*.cc' -o -name '*.hh' -o -name '*.proto' > ./cscope.files;
       \cscope -i ./cscope.files -bq<CR>
       \:cs reset<CR><CR>
+
+" this is used to avoid the following message when opening file in new tab using ctrlp:
+" `Press ENTER or type command to continue`
+" The reason that this message shows up is the filename is too long to fit
+" in a one-line height cmd window
+" This setting however will reduce the total lines a Vim window can show by 1
+" since one extra line will be allocated to Vim cmd window
+" another way to suppress this message is to find the corresponding
+" ctrlp command causing this message and add `silent`
+set cmdheight=2
