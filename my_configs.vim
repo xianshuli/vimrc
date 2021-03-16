@@ -41,3 +41,7 @@ map <F5> :!find ./ -name '*.c' -o -name '*.h' -o -name '*.gcl' -o -name '*.cc' -
 " another way to suppress this message is to find the corresponding
 " ctrlp command causing this message and add `silent`
 set cmdheight=2
+
+" use » to mark Tabs and ° to mark trailing whitespace. This is a
+" non-obtrusive way to mark these special characters.
+set list listchars=tab:»\ ,trail:°
