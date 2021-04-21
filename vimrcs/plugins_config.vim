@@ -9,7 +9,10 @@
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['ack', 'bufexplorer',  'goyo', 'zenroom2', 'nerdtree', 'open_file_under_cursor', 'vim-snipmate', 'ale', 'vim-expand-region', 'vim-fugitive', 'vim-indent-object', 'vim-multiple-cursors', 'vim-yankstack', 'vim-markdown']
+let g:pathogen_disabled = ['ack', 'bufexplorer',  'goyo', 'zenroom2',
+  \ 'open_file_under_cursor', 'vim-snipmate', 'ale', 'vim-expand-region',
+  \ 'vim-fugitive', 'vim-indent-object', 'vim-multiple-cursors',
+  \ 'vim-yankstack', 'vim-markdown']
 let s:vim_runtime = expand('<sfile>:p:h')."/.."
 call pathogen#infect(s:vim_runtime.'/sources_forked/{}')
 call pathogen#infect(s:vim_runtime.'/sources_non_forked/{}')
