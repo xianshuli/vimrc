@@ -218,4 +218,7 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 " delete this setting if the plugin becomes too slow
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
-nnoremap <leader>jd :YcmCompleter GoTo<CR>
+" let GoTo open the file in a new tab
+" check :h g:ycm_goto_buffer_command for details
+let g:ycm_goto_buffer_command = 'split'
+nnoremap <leader>jd :tab YcmCompleter GoTo<CR>
