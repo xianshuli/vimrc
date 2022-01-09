@@ -15,8 +15,13 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
-" control+x to cut to OSX clipboard
-" control+c to copy to OSX clipboard
+
+" ctrl + a to select all, this is mainly to combined with
+" ctrl + c or ctrl + x
+nnoremap <C-a> ggVG
+
+" ctrl + x to cut to OSX clipboard
+" ctrl + c to copy to OSX clipboard
 vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
 set number
