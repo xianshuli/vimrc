@@ -21,9 +21,8 @@ inoremap <S-Tab> <c-n>
 nnoremap <C-a> ggVG
 
 " ctrl + x to cut to OSX clipboard
-" ctrl + c to copy to OSX clipboard
 vmap <C-x> :!pbcopy<CR>
-vmap <C-c> :w !pbcopy<CR><CR>
+
 set number
 " use Space key to highlight current word in current file
 nnoremap <space> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>

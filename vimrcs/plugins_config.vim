@@ -234,3 +234,5 @@ map <F1> :YcmRestartServer<CR>
 " => vim-oscyank
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:oscyank_max_length = 1000000
+" ctrl + c to copy to system clipboard
+vmap <C-c> :OSCYank<CR>
