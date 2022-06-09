@@ -49,3 +49,8 @@ set cmdheight=2
 " use » to mark Tabs and ° to mark trailing whitespace. This is a
 " non-obtrusive way to mark these special characters.
 set list listchars=tab:»\ ,trail:°
+
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
