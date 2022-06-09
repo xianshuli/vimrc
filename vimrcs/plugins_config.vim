@@ -222,3 +222,9 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 " check :h g:ycm_goto_buffer_command for details
 let g:ycm_goto_buffer_command = 'split'
 nnoremap <leader>jd :tab YcmCompleter GoTo<CR>
+let g:ycm_key_detailed_diagnostics =
+      \ get( g:, 'ycm_key_detailed_diagnostics', '<leader>d' )
+let g:ycm_always_populate_location_list = 1
+nnoremap <leader>jn :lnext<CR>
+map <F3> :YcmCompleter FixIt<CR>
+map <F1> :YcmRestartServer<CR>
