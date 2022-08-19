@@ -227,6 +227,7 @@ let g:ycm_key_detailed_diagnostics =
 let g:ycm_always_populate_location_list = 1
 nnoremap <leader>jn :lnext<CR>
 map <F3> :YcmCompleter FixIt<CR>
+map <F2> :YcmShowDetailedDiagnostic<CR>
 map <F1> :YcmRestartServer<CR>
 
 
