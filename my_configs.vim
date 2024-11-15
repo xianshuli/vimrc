@@ -55,3 +55,4 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set splitright
+autocmd FileType c,cpp setlocal commentstring=//\ %s
