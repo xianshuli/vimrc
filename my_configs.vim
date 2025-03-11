@@ -56,3 +56,5 @@ set softtabstop=2
 set tabstop=2
 set splitright
 autocmd FileType c,cpp setlocal commentstring=//\ %s
+source /usr/share/vim/google/google.vim
+Glug youcompleteme-google

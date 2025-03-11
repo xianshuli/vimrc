@@ -229,6 +229,14 @@ nnoremap <leader>jn :lnext<CR>
 nnoremap <leader>1 :YcmRestartServer<CR>
 nnoremap <leader>2 :YcmShowDetailedDiagnostic<CR>
 nnoremap <leader>3 :YcmCompleter FixIt<CR>
+let g:ycm_language_server =
+  \ [
+  \   {
+  \     'name': 'ciderlsp',
+  \     'cmdline': [ '/google/bin/releases/cider/ciderlsp/ciderlsp', '--noforward_sync_responses' ],
+  \     'filetypes': [ 'java', 'kotlin', 'cpp' ]
+  \   },
+  \ ]
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
